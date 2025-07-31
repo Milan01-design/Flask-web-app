@@ -1,0 +1,19 @@
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: rgb(18, 18, 153);
+}
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+select, input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
