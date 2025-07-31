@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body class="bg-light">
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="http://127.0.0.1:5000/">My Profile</a>
+      <a class="navbar-brand" href="http://127.0.0.1:5000/about">About Me</a>
+      <a class="navbar-brand" href="http://127.0.0.1:5000/upload">Upload File</a>
+
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+<body class="container mt-5">
+     
+
+    <h1 class="mb-4">Welcome, {{ name }}!</h1>
+    <p>Age: {{ age }} | City: {{ city }}</p>
+
+    <h2 class="mt-5">Skills</h2>
+    <ul>
+        {% for skill in skills %}
+        <li>{{ skill }}</li>
+        {% endfor %}
+    </ul>
+  <h2 class="mt-5">Projects</h2>
+    <div class="row">
+        {% for project in projects %}
+        <div class="col-md-4 mb-3">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">{{ project.title }}</h5>
+                    <p class="card-text">{{ project.desc }}</p>
+                    <p class="text-muted"><strong>Tech:</strong> {{ project.tech }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
