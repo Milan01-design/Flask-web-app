@@ -1,2 +1,10 @@
 # Flask-web-app
-A simple and easy flask application with the help of python, html and css
+services:
+  - type: web
+    name: flask-web-app
+    runtime: python
+    buildCommand: ""
+    startCommand: "python app.py"
+    envVars:
+      - key: FLASK_ENV
+        value: production
